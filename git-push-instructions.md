@@ -36,3 +36,9 @@ rm -rf learn-jenkins-app/.git
 git add .
 git commit -m "Removed submodule and copied content"
 git push
+
+#Commit change
+git status
+git add git-push-instructions.md
+git commit -m "Add git-push-instructions.md for documentation"
+git push
