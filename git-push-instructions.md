@@ -17,13 +17,22 @@ git add .
 
 # Commit the files
 git commit -m "Initial commit"
+git commit -m "add md file"
 
 # Add the remote GitHub repository
 git remote add origin https://github.com/Ittihad-International-Investment-LLC/learn-jenkins-app.git
 
 # Push the code to GitHub
 git push -u origin main
-
-# (Optional) If a Git repository was mistakenly nested inside this one
-# Remove the embedded Git repo from staging
+# Remove the embedded Git repo from staging (submodule reference)
 git rm --cached -r learn-jenkins-app
+
+# Delete the nested .git directory to remove submodule behavior
+rm -rf learn-jenkins-app/.git
+
+# Move/copy the contents from the inner folder (if needed) to the current directory
+
+# Add and commit the cleaned structure
+git add .
+git commit -m "Removed submodule and copied content"
+git push
